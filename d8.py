@@ -1,19 +1,20 @@
-num = int(input())
+phonebook = {}
+entries = int(input())
 
-phone_book = {}
+for n in range(entries):
+    name, num = input().strip().split(' ')
+    name, num = [str(name), int(num)]
+    phonebook[name] = num
 
-for i in range(0, num):
-    entry = str(input()).split(" ")
+while True:
+    try:
+        search = str(input())
 
-    name = entry[0]
-    phone = int(entry[1])
-    phone_book[name] = phone
+        if search in phonebook:
+            output = ''.join('%s=%r' % (search, phonebook[search]))
+            print(output)
+        else:
+            print("Not found")
+    except EOFError:
+        break
 
-for j in range(0, num):
-    name = str(input())
-
-    if name in phone_book:
-        phone = phone_book[name]
-        print(name + "=" + str(phone))
-    else:
-        print("Not found")
