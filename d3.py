@@ -1,6 +1,5 @@
 n = int(input())
 
-
 if (n%2) != 0:
     print('Weird')
 
@@ -10,7 +9,3 @@ else:
 
     elif (n>=6 and n<=20):
         print('Weird')
-
-    
-
-
