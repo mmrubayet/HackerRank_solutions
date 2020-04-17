@@ -1,16 +1,16 @@
-T = int(input())
+t = int(input())
 
-for i in range(T):
-    tmp = str(input()).split()
-    N = int(tmp[0])
-    K = int(tmp[1])
+for _ in range(t):
+    n, k = map(int, input().split())
+    maxab = 0
 
-    maximum = 0
-
-    for j in range(1, N):
-        for k in range(j + 1, N + 1):
-            h = j & k
-            if K > h > maximum:
-                maximum = h
-
-    print(maximum)
+    for a in range(n-1, 1, -1):
+        for b in range(n, a, -1):
+            ab = a&b
+            if ab < k and ab > maxab:
+                maxab = ab
+            if maxab == k-1:
+                break
+        if maxab == k-1:
+            break
+    print(maxab)
