@@ -1,3 +1,10 @@
+
+s = input().split()
+ns = []
+for i in range(len(s)):
+     ns.append(s[i].capitalize())
+print(' '.join(ns))
+
 # #!/bin/python3
 #
 # import math
@@ -24,10 +31,3 @@
 #     fptr.write(result + '\n')
 #
 #     fptr.close()
-
-
-s = input().split()
-ns = []
-for i in range(len(s)):
-     ns.append(s[i].capitalize())
-print(' '.join(ns))
