@@ -1,3 +1,4 @@
+# Magic-square
 import time
 p = [[int(i) for i in input().split(" ")] for j in range(3)]
 
@@ -14,3 +15,4 @@ for i in range(8):
         print(f'r = {r}')
         time.sleep(5)
 print(min(r))
+
